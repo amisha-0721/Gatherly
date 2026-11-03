@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover inspiring conferences, creative workshops, live music and community experiences with Gatherly.">
+  <title>Gatherly — Find your next experience</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement"><span class="live-dot"></span> Your next great memory is one event away <a href="#events">Explore events <span aria-hidden="true">↗</span></a></div>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="#" aria-label="Gatherly home"><span class="brand-mark">g.</span> gatherly<span class="brand-period">.</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+      <div class="nav-links" id="navLinks">
+        <a href="#events">Explore events</a>
+        <a href="#about">Why Gatherly</a>
+        <a href="#newsletter">Stay in the loop</a>
+      </div>
+      <div class="nav-actions">
+        <button class="icon-button" id="themeToggle" aria-label="Switch color theme" title="Switch theme">☾</button>
+        <a class="button button-dark nav-cta" href="#events">Find an event <span>↗</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span> MAKE ROOM FOR SOMETHING NEW</div>
+        <h1>Good things<br>happen when<br><span>we gather.</span></h1>
+        <p class="hero-description">From big ideas to late-night dancing, find the people, places and experiences worth showing up for.</p>
+        <div class="hero-actions">
+          <a href="#events" class="button button-primary">Explore experiences <span>↗</span></a>
+          <div class="social-proof"><div class="avatar-stack"><span>R</span><span>A</span><span>M</span><span>S</span></div><div><strong>2,400+</strong><small>people found their people</small></div></div>
+        </div>
+        <div class="hero-footnote"><span class="sparkle">✳</span> Curated experiences. Real connections.</div>
+      </div>
+      <div class="hero-art" aria-label="A colorful outdoor music festival">
+        <div class="hero-image"></div>
+        <div class="floating-note note-top"><span class="note-icon">✳</span><div><strong>Make it a moment</strong><small>Memories start here</small></div></div>
+        <div class="floating-note note-bottom"><div class="mini-calendar"><b>18</b><span>NOV</span></div><div><strong>Design After Hours</strong><small>Chennai · 6:30 PM</small></div><span class="note-arrow">↗</span></div>
+        <div class="hero-sticker">GO<br>OUT<br><span>✦</span></div>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div class="container trust-inner"><span>YOUR CITY IS FULL OF POSSIBILITIES</span><div><b>✳</b> Creative minds</div><div><b>↗</b> Fresh perspectives</div><div><b>♡</b> Shared moments</div><div><b>✦</b> Good energy only</div></div>
+    </section>
+
+    <section class="events-section section container" id="events">
+      <div class="section-heading">
+        <div><div class="eyebrow"><span class="eyebrow-line"></span> THE GOOD STUFF</div><h2>Find your <span>next thing.</span></h2></div>
+        <p>Curious minds, creative spaces, unforgettable nights.<br>There's a place for you here.</p>
+      </div>
+      <div class="event-tools">
+        <label class="search-box"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Search events, places, vibes..." aria-label="Search events"><kbd>⌘ K</kbd></label>
+        <div class="filter-list" id="categoryFilters" aria-label="Filter by category">
+          <button class="filter-chip active" data-category="All">All events <span id="eventCount">06</span></button>
+          <button class="filter-chip" data-category="Technology">Technology</button>
+          <button class="filter-chip" data-category="Design">Design</button>
+          <button class="filter-chip" data-category="Music">Music</button>
+          <button class="filter-chip" data-category="Wellness">Wellness</button>
+          <button class="filter-chip" data-category="Community">Community</button>
+        </div>
+      </div>
+      <div class="featured-label"><span class="featured-star">✦</span><span>HANDPICKED FOR YOU</span><span class="label-rule"></span><span class="results-label" id="resultsLabel">6 experiences to explore</span></div>
+      <div class="event-grid" id="eventGrid" aria-live="polite"></div>
+      <div class="empty-state" id="emptyState" hidden><span>✳</span><h3>No events found just yet.</h3><p>Try another search or choose a different category.</p><button class="button button-dark" id="resetFilters">Clear filters</button></div>
+    </section>
+
+    <section class="quote-section" id="about">
+      <div class="container quote-inner"><div class="quote-symbol">“</div><div><p>The best stories don't start with a scroll. They start with a <em>show up.</em></p><span>— THE GATHERLY WAY</span></div><div class="quote-doodle">✳</div></div>
+    </section>
+
+    <section class="about-section section container">
+      <div class="about-heading"><div class="eyebrow"><span class="eyebrow-line"></span> MORE THAN A CALENDAR</div><h2>Less scrolling.<br><span>More living.</span></h2></div>
+      <div class="about-cards">
+        <article class="about-card"><span class="about-icon peach">✦</span><h3>Picked with purpose</h3><p>Interesting events, thoughtful hosts, and experiences that give you a reason to get out there.</p></article>
+        <article class="about-card"><span class="about-icon lilac">↗</span><h3>Your kind of people</h3><p>Meet curious, kind, creative people who are just as excited to try something new.</p></article>
+        <article class="about-card"><span class="about-icon mint">♡</span><h3>Easy from start to show</h3><p>Find your event, get the details, and save your spot without the complicated stuff.</p></article>
+      </div>
+    </section>
+
+    <section class="newsletter-section" id="newsletter">
+      <div class="container newsletter-inner"><div><div class="eyebrow"><span class="eyebrow-line"></span> A LITTLE GOOD IN YOUR INBOX</div><h2>Make plans worth<br><span>looking forward to.</span></h2><p>Get the freshest events and occasional inspiration. No noise, just good things.</p></div><form id="newsletterForm" class="newsletter-form" novalidate><label for="newsletterEmail">Your email address</label><div class="newsletter-input"><input type="email" id="newsletterEmail" placeholder="you@example.com" required><button type="submit" aria-label="Subscribe">↗</button></div><small id="newsletterMessage">By subscribing, you agree to receive Gatherly updates.</small></form><div class="newsletter-sun">✳</div></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-top"><a class="brand" href="#"><span class="brand-mark">g.</span> gatherly<span class="brand-period">.</span></a><p>Go where the good things happen.</p><a href="#events">Back to the good stuff ↑</a></div><div class="container footer-bottom"><span>© 2026 Gatherly. Made for moments.</span><span>Designed with curiosity <b>✳</b></span></div></footer>
+
+  <div class="modal-backdrop" id="eventModal" hidden>
+    <section class="event-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="closeModal" aria-label="Close event details">×</button>
+      <div class="modal-image" id="modalImage"></div>
+      <div class="modal-content"><div class="modal-kicker" id="modalCategory"></div><h2 id="modalTitle"></h2><p id="modalDescription"></p><div class="modal-meta" id="modalMeta"></div><div class="countdown" id="countdown"></div><button class="button button-primary modal-register" id="registerButton">Save my spot <span>↗</span></button></div>
+    </section>
+  </div>
+
+  <div class="modal-backdrop" id="registrationModal" hidden>
+    <section class="registration-modal" role="dialog" aria-modal="true" aria-labelledby="registrationTitle">
+      <button class="modal-close" id="closeRegistration" aria-label="Close registration form">×</button>
+      <div class="registration-side"><span class="brand-mark">g.</span><span class="registration-side-tag">YOUR NEXT CHAPTER STARTS HERE</span><h2>Save your<br><em>spot.</em></h2><p>Good plans are better when they're official.</p><div class="registration-decoration">✳</div></div>
+      <div class="registration-form-wrap"><div class="eyebrow"><span class="eyebrow-line"></span> LET'S MAKE IT HAPPEN</div><h2 id="registrationTitle">You're almost <span>there.</span></h2><p class="form-intro">A few details and you're on the list.</p>
+        <form id="registrationForm" novalidate>
+          <div class="form-field"><label for="participantName">Full name <span>*</span></label><input id="participantName" name="name" type="text" placeholder="e.g. Alex Morgan" autocomplete="name" required minlength="2"><small class="field-error" id="nameError"></small></div>
+          <div class="form-field"><label for="participantEmail">Email address <span>*</span></label><input id="participantEmail" name="email" type="email" placeholder="you@example.com" autocomplete="email" required><small class="field-error" id="emailError"></small></div>
+          <div class="form-field"><label for="participantPhone">Phone number <span>*</span></label><input id="participantPhone" name="phone" type="tel" placeholder="+91 98765 43210" autocomplete="tel" required><small class="field-error" id="phoneError"></small></div>
+          <div class="form-field"><label for="selectedEvent">Your event <span>*</span></label><select id="selectedEvent" name="event" required><option value="">Choose an event</option></select><small class="field-error" id="eventError"></small></div>
+          <button type="submit" class="button button-primary submit-registration">Confirm registration <span>↗</span></button>
+          <p class="privacy-note">Your details are used only to manage this registration.</p>
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"><span class="toast-icon">✓</span><div><strong id="toastTitle">You're on the list!</strong><p id="toastMessage">Your registration has been saved.</p></div><button id="closeToast" aria-label="Dismiss message">×</button></div>
+  <script src="script.js"></script>
+</body>
+</html>
